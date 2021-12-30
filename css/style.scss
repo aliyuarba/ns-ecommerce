@@ -75,19 +75,21 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 1rem;
 }
 .right h2 {
   text-transform: uppercase;
   font-size: .9rem;
   color: hsl(26, 100%, 55%);
+  margin-bottom: 1rem;
 }
 .right h1 {
   text-transform: capitalize;
+  margin-bottom: 1rem;
   font-size: 2rem;
 }
 .right p {
   letter-spacing: .02rem;
+  margin-bottom: 1rem;
   color: hsl(219, 9%, 45%);
 }
 .right .discount {
@@ -98,6 +100,7 @@ img {
 }
 .right h4 {
   text-decoration: line-through;
+  margin: 1rem 0;
   color: hsl(220, 14%, 75%);
 }
 .button-container {
