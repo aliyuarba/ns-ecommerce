@@ -5,7 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  // outline: 1px solid red;
+  outline: 1px solid red;
 }
 
 body {
@@ -115,9 +115,13 @@ img {
   justify-content: space-around;
   border-radius: 8px;
 }
-.add, .substract {
+.add, .substract, .user-count {
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+.add, .substract {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -128,11 +132,6 @@ img {
 .substract:disabled {
   filter: brightness(1.5);
   cursor: not-allowed;
-}
-
-.user-count {
-  display: flex;
-  justify-content: center;
 }
 
 .add-to-cart {

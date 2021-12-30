@@ -5,6 +5,7 @@
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  outline: 1px solid red;
 }
 
 body {
@@ -153,13 +154,22 @@ img {
   border-radius: 8px;
 }
 
-.add, .substract {
+.add, .substract, .user-count {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.add, .substract {
   border: none;
   background-color: transparent;
   cursor: pointer;
@@ -174,15 +184,6 @@ img {
   -webkit-filter: brightness(1.5);
           filter: brightness(1.5);
   cursor: not-allowed;
-}
-
-.user-count {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 .add-to-cart {
