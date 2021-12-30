@@ -15,59 +15,104 @@
   </head>
   <body>
     <nav>
-      <div class="logo">
+      <div class="togglebar">
+        <img src="/images/logo.svg" alt="" />
         <div class="btnmenu">
           <span></span>
           <span></span>
           <span></span>
         </div>
-        <img src="/images/logo.svg" alt="" />
       </div>
 
+      <div class="backlight-menu"></div>
       <ul class="menu">
-        <li><a href="#">Collections</a></li>
-        <li><a href="#">Men</a></li>
-        <li><a href="#">Women</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="#">collection</a></li>
+        <li><a href="#">men</a></li>
+        <li><a href="#">women</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
       </ul>
 
-      <div class="profile">
-        <div class="cart-container">
-          <img src="/images/icon-cart.svg" alt="" class="cart" />
-          <b class="cart-counter"></b>
-        </div>
-        <img src="/images/image-avatar.png" alt="" class="avatar" />
-        <div class="cart-info">
-          <h5>Cart</h5>
-          <div class="content">
-            <button class="checkout"><b>Checkout</b></button>
-            <div class="empty"><span>Your cart is empty</span></div>
+      <div class="cart">
+        <div class="cart-countainer">
+          <div class="cart-header">
+            <strong>Cart</strong>
           </div>
+
+          <ul class="cart-list"></ul>
+
+          <button class="checkout-button"><b>Checkout</b></button>
+
+          <div class="empty-cart"><b>Your cart is empty.</b></div>
         </div>
+      </div>
+
+      <div class="cart-icon">
+        <img src="/images/icon-cart.svg" alt="" />
+        <strong class="cart-counter">0</strong>
+      </div>
+
+      <div class="avatar">
+        <img src="/images/image-avatar.png" alt="" />
       </div>
     </nav>
 
-    <main>
+    <section class="overlay">
+      <div class="container">
+        <div class="close-button">
+          <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg"><path d="m11.596.782 2.122 2.122L9.12 7.499l4.597 4.597-2.122 2.122L7 9.62l-4.595 4.597-2.122-2.122L4.878 7.5.282 2.904 2.404.782l4.595 4.596L11.596.782Z" fill="#69707D" fill-rule="evenodd"/></svg>
+        </div>
+        
+        <div class="overlay-main-image-container">
+          <img src="/images/image-product-1.jpg" alt="" class="overlay-main-image">
+          <div class="next">
+            <svg width="13" height="18" xmlns="http://www.w3.org/2000/svg"><path d="m2 1 8 8-8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </div>
+          <div class="prev">
+            <svg width="12" height="18" xmlns="http://www.w3.org/2000/svg"><path d="M11 1 3 9l8 8" stroke="#1D2026" stroke-width="3" fill="none" fill-rule="evenodd"/></svg>
+          </div>
+        </div>
+
+        <div class="overlay-thumbnails">
+          <div class="overlay-thumbnail active">
+            <img src="/images/image-product-1-thumbnail.jpg" alt="">
+          </div>
+          <div class="overlay-thumbnail">
+            <img src="/images/image-product-2-thumbnail.jpg" alt="">
+          </div>
+          <div class="overlay-thumbnail">
+            <img src="/images/image-product-3-thumbnail.jpg" alt="">
+          </div>
+          <div class="overlay-thumbnail">
+            <img src="/images/image-product-4-thumbnail.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero">
       <div class="left">
-        <div class="main-image">
-          <img src="/images/image-product-1.jpg" alt="" class="active" />
-          <img src="/images/image-product-2.jpg" alt="" />
-          <img src="/images/image-product-3.jpg" alt="" />
-          <img src="/images/image-product-4.jpg" alt="" />
+        <div class="main-image-countainer">
+          <img src="/images/image-product-1.jpg" alt="" class="main-image" />
         </div>
         <div class="thumbnails">
-          <div class="active">
+          <div class="thumbnail active">
             <img src="/images/image-product-1-thumbnail.jpg" alt="" />
           </div>
-          <div><img src="/images/image-product-2-thumbnail.jpg" alt="" /></div>
-          <div><img src="/images/image-product-3-thumbnail.jpg" alt="" /></div>
-          <div><img src="/images/image-product-4-thumbnail.jpg" alt="" /></div>
+          <div class="thumbnail">
+            <img src="/images/image-product-2-thumbnail.jpg" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="/images/image-product-3-thumbnail.jpg" alt="" />
+          </div>
+          <div class="thumbnail">
+            <img src="/images/image-product-4-thumbnail.jpg" alt="" />
+          </div>
         </div>
       </div>
       <div class="right">
-        <h2>sneaker company</h2>
-        <h1>Fall Limited Edition Sneakers</h1>
+        <h2>sneakers company</h2>
+        <h1>fall limited edition sneakers</h1>
         <p>
           These low-profile sneakers are your perfect casual wear companion.
           Featuring a durable rubber outer sole, they’ll withstand everything
@@ -75,20 +120,21 @@
         </p>
         <h3>$125.00 <span class="discount">50%</span></h3>
         <h4>$250.00</h4>
-        <div class="keys">
-          <div class="add-or-substract">
-            <div class="minus" onclick="remove()">
-              <img src="/images/icon-minus.svg" alt="" />
-            </div>
-            <div class="num"><b>0</b></div>
-            <div class="plus" onclick="add()">
-              <img src="/images/icon-plus.svg" alt="" />
-            </div>
+        <div class="button-container">
+          <div class="add-n-substract">
+            <button class="substract"><img src="/images/icon-minus.svg" alt=""></button>
+            <div class="user-count"><strong>0</strong></div>
+            <button class="add"><img src="/images/icon-plus.svg" alt=""></button>
           </div>
-          <button class="add-to-cart">Add to Cart</button>
+          <button class="add-to-cart"><strong>Add to Cart</strong></button>
         </div>
       </div>
-    </main>
+    </section>
+
+    <br />
+    <br />
+    <br />
+    <br />
 
     <script
       src="https://code.jquery.com/jquery-3.6.0.slim.min.js"
