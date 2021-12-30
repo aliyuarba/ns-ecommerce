@@ -5,7 +5,7 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  outline: 1px solid red;
+  // outline: 1px solid red;
 }
 
 body {
@@ -111,7 +111,6 @@ img {
 .add-n-substract {
   display: flex;
   background-color: hsl(223, 64%, 98%);
-  padding: .5rem;
   justify-content: space-around;
   border-radius: 8px;
 }
@@ -120,6 +119,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: .5rem 0;
 }
 .add, .substract {
   border: none;
