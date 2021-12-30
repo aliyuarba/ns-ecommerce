@@ -269,6 +269,7 @@ img {
 
 .overlay-main-image {
   width: 100%;
+  height: auto;
   border-radius: 14px;
 }
 
